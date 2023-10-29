@@ -3,32 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/css/style.css">
     <title>Calculadora De Dieta</title>
-    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+    
 </head>
 <body>
-    <section id="main-sidebar" class="menu-sidebar">
-        <div class="sidebar-pointer"></div>
-        <a href="">Calculadora TMB</a>
-        <a href="">Calculadora De Dieta</a>
-    </section>
-    <header id="main-header">
-        <div class="menu"></div>
-
-        <div class="logo"></div>
-
-        <img class="sidebar" src="./src/imgs/menu.png" onclick="menu()" alt="sidebar">
+    <header class="header">
+        <nav class="navbar navbar-expand-xxl navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Diet</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOpcao" aria-controls="navbarOpcao" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarOpcao">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Calculadora TMB</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Calculadora De Dieta</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
-    <main id="main-content">
-        <h1>TUDO QUE NÃO TE CONTARAM SOBRE DIETA</h1>
-        <h3>Parece um bixo de 7 cabeças mas na verdade, e mais simples do que parece</h2>
-            <P>A dieta e como se fosse matemática, chamamos esse sistema de balanço calórico, se vc consome mais do que gasta vc ganha peso, se consome menos perde peso e se consome o mesmo que gasta mantem.
-            Isso se chama Balanço Calórico
-            </P>
-    </main>
+   
     
-    <script src="src/js/script.js"></script>
+    <main class="container-fluid" id="main-content">
+        <hr>
+        <section class="container">
+            <h1>TUDO QUE NÃO TE CONTARAM SOBRE DIETA</h1>
+            <h3>Parece um bixo de 7 cabeças mas na verdade, e mais simples do que parece</h2>
+                <P>A dieta e como se fosse matemática, chamamos esse sistema de balanço calórico, se vc consome mais do que gasta vc ganha peso, se consome menos perde peso e se consome o mesmo que gasta mantem.
+                Isso se chama Balanço Calórico
+                </P>
+        </section>
+
+        <section class="container main-section">
+            <header class="container main-section-header">
+                <div class="container">
+                    <h2>TAXA METABÓLICA BASAL (TMB)</h2>
+                    <h3>TAXA METABÓLICA BASAL OU BASAL METABOLIC RATE, PERCENTUAL DE GORDURA, DIVISÃO DE MACROS, E OUTRAS PARADAS...</h3>
+                </div>
+                
+            </header>
+            <main class="container main-section-main">
+                <div class="radio-fomart">
+                    <label for="sexo">Sexo*</label>
+                    <label><input type="radio" value="Ferminino" name="sexo"> Ferminino</label>
+                    <label><input type="radio" value="Masculino" name="sexo"> Masculino</label>
+                </div>
+                <div class="radio-fomart">
+                    <label for="Biotipo">Biotipo*</label>
+                    <label><input type="radio" value="Ectomorfo" name="Biotipo"> Ectomorfo</label>
+                    <label><input type="radio" value="Mesomorfo" name="Biotipo"> Mesomorfo</label>
+                    <label><input type="radio" value="Endomorfo" name="Biotipo"> Endomorfo</label>
+                    <p>Lembrando que isso é apenas uma tendência, ou seja, marque ectofmorfo se você tem tendência a emagrecer, se você tem tendencia a ser atletico, marque mesomorfo, e se você tem tendência a engordar, marque endomorfo.</p>
+                </div> 
+                <div>
+                    <label for="Altura">Altura (cm)*</label>
+                    <input type="number" name="Altura" id="Altura">
+                </div>
+                <div>
+                    <label for="Peso">Peso(kg)*</label>
+                    <input type="number" name="Peso" id="Peso">
+                </div>
+                <div>
+                    <label for="Idade">Idade (anos)*</label>
+                    <input type="number" name="Idade" id="Idade">
+                </div>
+                <div>
+                    <label for="resultado">Taxa Metabólica Basal</label>
+                    <input type="text" name="resultado" id="resultado">
+                </div>
+                <p>Estas são as calorias que seu corpo gastam simplesmente para sobreviver, ou seja, em dias de descanso.</p>
+            </main>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <ul class="copyright">
+            <li> Calculadora @ <a href="#">Dieta</a></li>
+        </ul>
+    </footer>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../src/js/script.js"></script>
 </body>
 
 </html>
